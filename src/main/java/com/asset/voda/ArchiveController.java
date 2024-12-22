@@ -70,7 +70,7 @@ public class ArchiveController {
             // Step 4: Update Document Metadata
             String updateResponse = documentumService.updateDocumentMetadata(httpClient, metadata.getR_object_id());
 
-            // Convert JsonObject to Map for Jackson serialization using Gson
+            // Convert String to Map for Jackson serialization using Gson
             Map<String, Object> updateResponseMap = new Gson().fromJson(updateResponse, Map.class);
 
             // Construct the final response
